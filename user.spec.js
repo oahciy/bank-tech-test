@@ -22,8 +22,8 @@ describe("User model", () => {
     const today = date.toLocaleDateString("en-GB");
     expect(user.print()).toEqual(
       "date || credit || debit || balance\n" +
-        `${today} || 1000 ||  || 1000\n` +
-        `${today} ||  || 100 || 900\n`
+        `${today} || 1000.00 || 0.00 || 1000.00\n` +
+        `${today} || 0.00 || 100.00 || 900.00\n`
     );
   });
 });
