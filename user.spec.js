@@ -18,10 +18,12 @@ describe("User model", () => {
     const user = new User();
     user.deposit(1000);
     user.withdraw(100);
+    const date = new Date();
+    const today = date.toLocaleDateString("en-GB");
     expect(user.print()).toEqual(
       "date || credit || debit || balance\n" +
-        "25/10/2022 || 1000 ||  || 1000\n" +
-        "25/10/2022 ||  || 100 || 900\n"
+        `${today} || 1000 ||  || 1000\n` +
+        `${today} ||  || 100 || 900\n`
     );
   });
 });
