@@ -19,9 +19,9 @@ describe("User model", () => {
     user.deposit(1000);
     user.withdraw(100);
     expect(user.print()).toEqual(
-      "date || credit || debit || balance\n" + 
-      "25/10/2022 || 1000 || || 1000\n" +
-      "25/10/2022 || || 100 || 900\n"
-    )
+      "date || credit || debit || balance\n" +
+        "25/10/2022 || 1000 ||  || 1000\n" +
+        "25/10/2022 ||  || 100 || 900\n"
+    );
   });
 });

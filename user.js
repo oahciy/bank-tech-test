@@ -14,10 +14,16 @@ class User {
     this.#save("", debit);
   }
 
-  print() {}
+  print() {
+    let statementToPrint = "date || credit || debit || balance\n";
+    for (let index = 0; index < this.statement.length; index++) {
+      statementToPrint += `${this.statement[index].date} || ${this.statement[index].credit} || ${this.statement[index].debit} || ${this.statement[index].balance}\n`;
+    }
+    return statementToPrint;
+  }
 
   #save(credit, debit) {
-    const today = new Date()
+    const today = new Date();
     const statement = {
       date: today.toLocaleDateString("en-GB"),
       credit: credit,
